@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="prompt/market - a marketplace for practical AI prompts">
+  <title>prompt/market</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" data-route="home">prompt/market</a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#home" data-route="home">Discover</a>
+      <a href="#library" data-route="library">My library</a>
+      <a href="#analytics" data-route="analytics">Seller dashboard</a>
+    </nav>
+    <div class="header-actions">
+      <a class="signin" href="#library" data-route="library">Maya Chen</a>
+      <button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    </div>
+    <div class="mobile-menu" aria-hidden="true">
+      <a href="#home" data-route="home">Discover</a>
+      <a href="#library" data-route="library">My library</a>
+      <a href="#analytics" data-route="analytics">Seller dashboard</a>
+      <a href="#create" data-route="create">Create a prompt</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="screen screen-home" data-screen="home">
+      <div class="hero dark-panel">
+        <div class="hero-copy">
+          <span class="eyebrow accent-text">THE PROMPT ECONOMY</span>
+          <h1>Ideas in.<br>Better output out.</h1>
+          <p>Buy, sell, and remix the prompts that make AI work brilliantly for you.</p>
+        </div>
+        <div class="hero-tools">
+          <label class="search-field"><span aria-hidden="true">/</span><input type="search" placeholder="Search prompts, creators, tools..."></label>
+          <div class="hero-stats"><strong>12.8k</strong><span>prompts published</span><strong>4.6k</strong><span>independent creators</span></div>
+        </div>
+      </div>
+      <div class="section-heading">
+        <div><h2>Find your next unfair advantage.</h2><p>Curated prompts from people who make things.</p></div>
+        <button class="text-button" type="button" data-filter="popular">Sort: Popular</button>
+      </div>
+      <div class="filter-row" role="tablist" aria-label="Prompt filters"><button class="filter active" type="button">Trending</button><button class="filter" type="button">New &amp; notable</button><button class="filter" type="button">Best sellers</button><button class="filter" type="button">Free</button></div>
+      <div class="market-grid">
+        <article class="prompt-card"><div class="card-art mint"><span>WRITING</span><strong>MAKE IT<br>MEMORABLE</strong></div><div class="card-body"><h3>The Brand Voice Architect</h3><p>Build a distinct voice guide from five examples and a feeling.</p><div class="card-meta"><span>by Maya Chen</span><strong>$12</strong></div><button class="link-button" type="button" data-route="detail">View prompt</button></div></article>
+        <article class="prompt-card"><div class="card-art peach"><span>RESEARCH</span><strong>THINK<br>DEEPER</strong></div><div class="card-body"><h3>The Fast Research Partner</h3><p>Turn a fuzzy question into a source-backed research plan.</p><div class="card-meta"><span>by Studio North</span><strong>$18</strong></div><button class="link-button" type="button" data-route="detail">View prompt</button></div></article>
+        <article class="prompt-card"><div class="card-art blue"><span>PRODUCTIVITY</span><strong>CLEAR<br>THE NOISE</strong></div><div class="card-body"><h3>Your Weekly Chief of Staff</h3><p>A calm system for turning a week into momentum.</p><div class="card-meta"><span>by Alex Rivera</span><strong>$9</strong></div><button class="link-button" type="button" data-route="detail">View prompt</button></div></article>
+        <aside class="seller-card coral"><span class="eyebrow">FOR CREATORS</span><h3>Your best prompts deserve a storefront.</h3><p>Set your price, share your process, and earn whenever your work sells.</p><button class="dark-button" type="button" data-route="create">Start selling</button></aside>
+      </div>
+    </section>
+
+    <section id="detail" class="screen" data-screen="detail" hidden>
+      <p class="breadcrumb">Discover / Writing / The Brand Voice Architect</p>
+      <div class="detail-layout"><div class="feature-art mint"><span>WRITING - FEATURED PROMPT</span><strong>MAKE YOUR<br>VOICE<br>UNFORGETTABLE</strong></div><div class="detail-copy"><h1>The Brand Voice Architect</h1><p class="muted">by Maya Chen - 4.9 stars - 218 reviews</p><p class="lead">A practical prompt system for turning scattered references into a voice your audience recognizes instantly.</p><span class="eyebrow">WHAT YOU GET</span><ul class="check-list"><li>Voice discovery questionnaire</li><li>Reusable system prompt</li><li>Three worked examples</li><li>Update access for 12 months</li></ul><button class="dark-button large" type="button" data-route="checkout">Buy prompt - $12</button><small class="secure-note">Secure checkout - Instant access</small></div></div>
+      <div class="quote-panel"><div><h2>Loved by builders</h2><blockquote>"Finally, a prompt that gives our team a shared language instead of another blank chat window."</blockquote><small>Jordan Lee - Product lead</small></div><div class="quote-score"><strong>4.9 / 5</strong><span>from 218 buyers</span></div></div>
+    </section>
+
+    <section id="checkout" class="screen" data-screen="checkout" hidden>
+      <div class="screen-title"><div><span class="eyebrow">SECURE CHECKOUT - 1 OF 2</span><h1>Complete your purchase.</h1><p>Get instant access to your new prompt system.</p></div></div>
+      <div class="checkout-layout"><aside class="order-summary dark-panel"><span class="eyebrow">ORDER SUMMARY</span><div class="summary-art mint"><strong>MAKE IT<br>MEMORABLE</strong></div><h2>The Brand Voice Architect</h2><p>by Maya Chen</p><hr><div class="price-line"><span>Subtotal</span><strong>$12.00</strong></div><div class="total-line"><span>Total</span><strong>$12.00</strong></div></aside><form class="payment-card" id="payment-form"><h2>Payment details</h2><label>Email address<input type="email" value="maya.chen@studio.com" required></label><label>Card information<input value="4242 4242 4242 4821" required></label><div class="payment-note">Your payment is encrypted and secure.</div><button class="coral-button" type="submit">Pay $12.00</button><small class="muted">By completing your purchase, you agree to the marketplace terms.</small></form></div>
+    </section>
+
+    <section id="library" class="screen" data-screen="library" hidden>
+      <div class="screen-title with-action"><div><h1>Your prompt library.</h1><p>Everything you have bought, saved, and made yours.</p></div><label class="light-search"><span>/</span><input type="search" placeholder="Search your library..."></label></div>
+      <div class="filter-row library-tabs"><button class="filter active" type="button">All prompts (6)</button><button class="filter" type="button">Favorites (2)</button><button class="filter" type="button">Recently used</button></div>
+      <div class="library-grid"><article class="library-card"><div class="library-art mint"></div><div><h2>The Brand Voice Architect</h2><p>Purchased Jun 20 - 3 runs</p><button class="link-button" type="button">Open prompt</button></div></article><article class="library-card"><div class="library-art peach"></div><div><h2>The Fast Research Partner</h2><p>Purchased Jun 12 - 1 run</p><button class="link-button" type="button">Open prompt</button></div></article><aside class="seller-card coral"><span class="eyebrow">YOUR NEXT IDEA</span><h3>Save a prompt for later.</h3><p>Keep the good ones close. Your next breakthrough is probably one search away.</p><button class="dark-button" type="button" data-route="home">Explore marketplace</button></aside></div>
+      <div class="recent-panel"><h2>Recently used</h2><div><strong>The Brand Voice Architect</strong><span>Last used today - 3 runs</span></div><div><strong>Your Weekly Chief of Staff</strong><span>Last used Jun 18 - 8 runs</span></div></div>
+    </section>
+
+    <section id="analytics" class="screen" data-screen="analytics" hidden>
+      <div class="screen-title with-action"><div><h1>Good morning, Maya.</h1><p>Here is how your prompt shop is performing.</p></div><button class="select-button" type="button">Last 30 days</button></div>
+      <div class="metrics"><article class="metric dark-panel"><span>TOTAL REVENUE</span><strong>$4,286.40</strong><small>Up 18.6% vs previous period</small></article><article class="metric"><span>PROMPT ORDERS</span><strong>386</strong><small>Up 12.4% vs previous period</small></article><article class="metric"><span>STORE CONVERSION</span><strong>7.8%</strong><small>Up 1.2 pts vs previous period</small></article><article class="metric coral"><span>UNIQUE VISITORS</span><strong>8,942</strong><small>Up 24.1% traffic is rising</small></article></div>
+      <div class="analytics-grid"><article class="chart-panel"><h2>Sales overview</h2><p>Revenue generated by day</p><div class="chart-total">$4,286 <small>Up 18.6%</small></div><div class="bars" aria-label="Revenue bars"> <i style="height:32%"></i><i style="height:48%"></i><i style="height:39%"></i><i style="height:62%"></i><i style="height:53%"></i><i style="height:76%"></i><i style="height:67%"></i><i style="height:92%"></i><i style="height:58%"></i><i style="height:84%"></i><i style="height:72%"></i><i class="latest" style="height:98%"></i></div></article><article class="top-prompts dark-panel"><h2>Top prompts</h2><p>Your best sellers this month</p><div class="top-row"><span>The Brand Voice Architect<small>218 sales</small></span><strong>$2,616</strong></div><div class="top-row"><span>Launch Plan in One Sitting<small>74 sales</small></span><strong>$888</strong></div><div class="top-row"><span>The Fast Research Partner<small>52 sales</small></span><strong>$936</strong></div></article></div>
+      <div class="payout-strip"><span><small>NEXT PAYOUT</small><strong>Friday, Jun 27</strong></span><strong>$1,284.90</strong><span>to Stripe ending 4821</span><button class="text-button" type="button">View payouts</button></div>
+    </section>
+
+    <section id="create" class="screen" data-screen="create" hidden>
+      <div class="screen-title with-action"><div><h1>Create a new prompt.</h1><p>Package your process so someone else can do their best work faster.</p></div><button class="dark-button" type="button" data-action="publish">Publish</button></div>
+      <div class="create-layout"><form class="prompt-form" id="prompt-form"><span class="eyebrow">PROMPT DETAILS</span><label>Title<input value="The Brand Voice Architect" required></label><label>Description<textarea rows="2">Turn scattered references into a distinct, recognizable brand voice.</textarea></label><div class="two-fields"><label>Category<select><option>Writing</option><option>Research</option><option>Productivity</option></select></label><label>Price<input value="$12.00"></label></div><label>Prompt content<textarea class="prompt-editor" rows="8">You are a brand voice strategist.
+
+Ask for five reference samples, identify the patterns that make them recognizable, then create a voice guide with principles, do / do not examples, and a reusable system prompt.</textarea></label><div class="form-links">+ Add variable <span>+ Add example</span></div></form><aside class="preview-panel mint"><span class="eyebrow">LIVE PREVIEW</span><h2>The Brand Voice Architect</h2><p class="preview-meta">WRITING - $12</p><p>Turn scattered references into a distinct, recognizable brand voice.</p><div class="preview-footer"><span>READY TO SHARE</span><p>Your prompt will appear in the marketplace after publishing.</p></div></aside></div>
+    </section>
+  </main>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
