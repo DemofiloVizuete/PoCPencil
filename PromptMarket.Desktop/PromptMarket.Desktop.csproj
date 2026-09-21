@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <DebugType>None</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.12" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3240.44" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\index.html">
+      <LogicalName>PromptMarket.Desktop.Web.index.html</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\styles.css">
+      <LogicalName>PromptMarket.Desktop.Web.styles.css</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\app.js">
+      <LogicalName>PromptMarket.Desktop.Web.app.js</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Target Name="RemoveDocumentationFilesFromPublish" AfterTargets="Publish">
+    <ItemGroup>
+      <DocumentationFilesToRemove Include="$(PublishDir)*.xml" />
+    </ItemGroup>
+    <Delete Files="@(DocumentationFilesToRemove)" />
+  </Target>
+
+</Project>
